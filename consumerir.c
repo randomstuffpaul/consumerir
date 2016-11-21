@@ -11,95 +11,189 @@
 // Function declarations
 
 // int __fastcall _cxa_finalize(_DWORD); weak
-// void *memcpy(void *, const void *, size_t);
-// void free(void *);
-// int strcmp(const char *, const char *);
+// void *memcpy(void *dest, const void *src, size_t n);
+// void free(void *ptr);
+// int strcmp(const char *s1, const char *s2);
 // int _android_log_print(_DWORD, _DWORD, const char *, ...); weak
-// int __fastcall open(_DWORD, _DWORD); weak
-// int __cdecl close(_DWORD, _DWORD); weak
-// void *malloc(size_t);
-// void *memset(void *, int, size_t);
+// int open(const char *file, int oflag, ...);
+// int close(int fd);
+// void *malloc(size_t size);
+// void *memset(void *s, int c, size_t n);
 // int _sprintf_chk(_DWORD, _DWORD, _DWORD, const char *, ...); weak
 // int __fastcall _strlen_chk(_DWORD, _DWORD); weak
 // int __fastcall strlcat(_DWORD, _DWORD, _DWORD); weak
-// char *strcpy(char *, const char *);
-// int __fastcall clock_gettime(_DWORD, _DWORD); weak
+// char *strcpy(char *dest, const char *src);
+// int clock_gettime(clockid_t clock_id, struct timespec *tp);
 // int __cdecl _errno(_DWORD); weak
-// int __fastcall sched_yield(_DWORD); weak
-// int __fastcall write(_DWORD, _DWORD, _DWORD); weak
+// int sched_yield(void);
+// int usleep(__useconds_t useconds);
 // int __fastcall _stack_chk_fail(_DWORD); weak
-// int __fastcall pthread_mutex_lock(_DWORD); weak
-// int __fastcall pthread_mutex_unlock(_DWORD); weak
-int sub_7C0();
-int (*__fastcall sub_7E0(int (*result)(void)))(void);
-int sub_854(); // weak
-signed int __fastcall sub_858(int a1, unsigned int a2, void *a3);
-int __fastcall sub_878(void *a1);
-signed int __fastcall sub_884(int a1, const char *a2, _DWORD *a3);
-int __fastcall sub_9B8(int a1, int a2, int a3);
-int __fastcall sub_BC0(int a1, int a2, int a3, int a4);
+// ssize_t write(int fd, const void *buf, size_t n);
+// int pthread_mutex_lock(pthread_mutex_t *mutex);
+// int pthread_mutex_unlock(pthread_mutex_t *mutex);
+// void abort(void);
+// int fprintf(FILE *stream, const char *format, ...);
+// int __fastcall _aeabi_memcpy(_DWORD); weak
+// int __fastcall _aeabi_memset(_DWORD, _DWORD, _DWORD); weak
+// int dladdr(void); weak
+// int __fastcall _snprintf_chk(_DWORD, _DWORD, _DWORD, _DWORD); weak
+// int __fastcall _gnu_Unwind_Find_exidx(_DWORD, _DWORD); weak
+int j___aeabi_ldiv0();
+unsigned __int64 __fastcall j___gnu_uldivmod_helper(unsigned __int64 a1, unsigned __int64 a2, _QWORD *a3);
+// int raise(int sig);
+unsigned int __fastcall j___lshrdi3(unsigned int a1, unsigned int a2, int a3);
+int sub_D00();
+int (*__fastcall sub_D20(int (*result)(void)))(void);
+signed int sub_DE0();
+unsigned int __fastcall sub_DE4(int a1, unsigned int a2, void *a3);
+int __fastcall sub_E04(void *a1);
+signed int __fastcall sub_E10(int a1, const char *a2, _DWORD *a3);
+int __fastcall sub_F58(int a1, int *a2, int a3);
+int __fastcall sub_1190(int a1, int a2, int *a3, int a4);
+signed int __fastcall sub_153C(int a1, int a2, unsigned int a3, int a4, int *a5);
+signed int __fastcall sub_15E0(int a1, int a2, unsigned int a3, int a4);
+signed int __fastcall sub_17FC(int a1, int a2, char a3);
+void __fastcall sub_1918(int a1, int a2, int a3);
+int __fastcall sub_199C(int a1, int a2, int a3, int a4, int a5);
+int __fastcall sub_19B4(int _R0);
+int __fastcall sub_19BC(int _R0);
+int __fastcall sub_19C4(int _R0);
+void sub_19CC();
+void sub_1A10();
+int __fastcall sub_1A24(int a1);
+signed int __fastcall sub_1A74(int a1, int a2, _DWORD *a3);
+signed int __fastcall sub_1AA4(int a1, int a2, int a3);
+signed int __fastcall sub_1AE8(int a1, int a2, _QWORD *a3);
+signed int __fastcall sub_1B18(int a1, int a2, int a3, int a4);
+int __fastcall sub_1B50(int a1);
+signed int __fastcall sub_1B58(int a1, int a2);
+signed int __fastcall sub_1B78(int a1);
+int __fastcall sub_1B90(int a1);
+int __fastcall sub_1BA0(int a1, int a2);
+int __fastcall sub_1BC4(int a1, signed int a2);
+int __fastcall sub_1C60(int result, signed int a2, int a3);
+int __fastcall sub_1CF8(int a1, int a2);
+__int64 __fastcall sub_1D1C(int a1, int a2);
+int __fastcall sub_1DCC(int a1, int a2, int a3, int a4);
+signed int __fastcall sub_1EA0(int a1);
+int __fastcall sub_1EEC(int a1, int a2);
+void __fastcall sub_1F2C(int a1);
+int __fastcall sub_1F44(int a1);
+signed int __fastcall sub_1F4C(int a1, int a2, int a3, _DWORD *a4);
+int __fastcall sub_1FA8(int a1, int a2);
+const char *__fastcall sub_1FF4(int a1, signed int a2);
+int __fastcall sub_1FFC(int result);
+void __fastcall sub_2004(int a1, int a2, int a3, int a4);
+int __fastcall sub_2038(int a1);
+int sub_2088(); // weak
+int __fastcall sub_2218(int result, int a2, int a3, _DWORD *a4, int a5, int a6, int a7, _DWORD *a8);
+int sub_28F0(); // weak
+int __fastcall sub_2904(int _R0);
+int __fastcall sub_290C(int _R0);
+int __fastcall sub_2914(int _R0);
+int __fastcall sub_291C(_DWORD *a1);
+int __fastcall sub_2960(_DWORD *a1);
+int _aeabi_ldiv0();
+signed __int64 __fastcall _gnu_ldivmod_helper(signed __int64 a1, signed __int64 a2, _QWORD *a3);
+unsigned __int64 __fastcall _gnu_uldivmod_helper(unsigned __int64 a1, unsigned __int64 a2, _QWORD *a3);
+unsigned int __fastcall _lshrdi3(unsigned int a1, unsigned int a2, int a3);
+void sub_2D14();
+void sub_2D18();
+int __fastcall sub_2D24(_DWORD *a1);
+int __fastcall sub_2D28(_DWORD *a1);
 
 //-------------------------------------------------------------------------
 // Data declarations
 
-int dword_B88[2] = { 1000000000, 0 }; // weak
-_UNKNOWN unk_D7F; // weak
-void *off_2000 = &off_2000; // weak
-int dword_2004 = 4294967295; // weak
-_UNKNOWN unk_208C; // weak
+int dword_1150[2] = { 1000000000, 0 }; // weak
+_UNKNOWN unk_3032; // weak
+void *off_4DEC = (void *)0x1B99; // weak
+int GLOBAL_OFFSET_TABLE_ = 0; // weak
+void *off_5000 = &off_5000; // weak
+int dword_5004 = 4294967295; // weak
+_UNKNOWN unk_508C; // weak
+_UNKNOWN unk_5090; // weak
 // extern _UNKNOWN _stack_chk_guard; weak
+// extern struct _IO_FILE *stderr;
 
 
-//----- (000007C0) --------------------------------------------------------
-int sub_7C0()
+//----- (00000CA8) --------------------------------------------------------
+int j___aeabi_ldiv0()
 {
-  return _cxa_finalize(&off_2000);
+  return _aeabi_ldiv0();
 }
-// 6B8: using guessed type int __fastcall _cxa_finalize(_DWORD);
-// 2000: using guessed type void *off_2000;
 
-//----- (000007E0) --------------------------------------------------------
-int (*__fastcall sub_7E0(int (*result)(void)))(void)
+//----- (00000CB4) --------------------------------------------------------
+unsigned __int64 __fastcall j___gnu_uldivmod_helper(unsigned __int64 a1, unsigned __int64 a2, _QWORD *a3)
+{
+  return _gnu_uldivmod_helper(a1, a2, a3);
+}
+
+//----- (00000CF0) --------------------------------------------------------
+unsigned int __fastcall j___lshrdi3(unsigned int a1, unsigned int a2, int a3)
+{
+  return _lshrdi3(a1, a2, a3);
+}
+
+//----- (00000D00) --------------------------------------------------------
+int sub_D00()
+{
+  return _cxa_finalize(&off_5000);
+}
+// B34: using guessed type int __fastcall _cxa_finalize(_DWORD);
+// 5000: using guessed type void *off_5000;
+
+//----- (00000D20) --------------------------------------------------------
+int (*__fastcall sub_D20(int (*result)(void)))(void)
 {
   if ( result )
     result = (int (*)(void))result();
   return result;
 }
 
-//----- (00000858) --------------------------------------------------------
-signed int __fastcall sub_858(int a1, unsigned int a2, void *a3)
+//----- (00000DE0) --------------------------------------------------------
+signed int sub_DE0()
 {
-  signed int v3; // r4@2
+  return 1;
+}
+
+//----- (00000DE4) --------------------------------------------------------
+unsigned int __fastcall sub_DE4(int a1, unsigned int a2, void *a3)
+{
+  unsigned int v3; // r4@3
 
   if ( a2 >= 1 )
-    v3 = 1;
-  else
-    v3 = a2;
-  memcpy(a3, "Ç>", 8 * v3);
+    a2 = 1;
+  v3 = a2;
+  memcpy(a3, "€>", 8 * a2);
   return v3;
 }
 
-//----- (00000878) --------------------------------------------------------
-int __fastcall sub_878(void *a1)
+//----- (00000E04) --------------------------------------------------------
+int __fastcall sub_E04(void *a1)
 {
   free(a1);
   return 0;
 }
 
-//----- (00000884) --------------------------------------------------------
-signed int __fastcall sub_884(int a1, const char *a2, _DWORD *a3)
+//----- (00000E10) --------------------------------------------------------
+signed int __fastcall sub_E10(int a1, const char *a2, _DWORD *a3)
 {
-  int v3; // r8@1
+  int v3; // r9@1
   _DWORD *v4; // r6@1
-  int v5; // r4@1
+  int v5; // r5@1
   int v6; // r0@5
-  int v7; // r1@5
+  int v7; // r7@5
   const char *v8; // r1@6
   const char *v9; // r2@6
-  void *v10; // r7@12
-  const char *v12; // [sp+4h] [bp-1Ch]@1
+  void *v10; // r4@12
+  int v12; // [sp+0h] [bp-28h]@1
+  const char *v13; // [sp+4h] [bp-24h]@1
+  _DWORD *v14; // [sp+8h] [bp-20h]@1
 
-  v12 = a2;
+  v12 = a1;
+  v13 = a2;
+  v14 = a3;
   v3 = a1;
   v4 = a3;
   v5 = strcmp(a2, "transmitter");
@@ -110,194 +204,1712 @@ signed int __fastcall sub_884(int a1, const char *a2, _DWORD *a3)
     _android_log_print(6, "ConsumerIrHal", "NULL device on open");
     return -22;
   }
-  if ( dword_2004 < 0 )
+  if ( dword_5004 < 0 )
   {
-    _android_log_print(3, "ConsumerIrHal", "Try to use F Chip.");
-    v6 = open("/sys/class/sec/sec_ir/ir_send", 1);
+    _android_log_print(3, "ConsumerIrHal", "Try to use A Chip.");
+    v6 = open("/sys/class/sensors/irled_remote/irled_send", 1);
+    v7 = v6;
     if ( v6 < 0 )
     {
       v8 = "ConsumerIrHal";
-      v9 = "Consumer IR HAL is failed to load (F Chip)";
-      goto LABEL_11;
+      v9 = "Consumer IR HAL is failed to load : A (%d)";
+LABEL_9:
+      _android_log_print(6, v8, v9, v7, v12, v13, v14);
+      goto LABEL_10;
     }
-    dword_2004 = 0;
-    if ( close(v6, v7) < 0 )
-      _android_log_print(6, "ConsumerIrHal", "Fail to close fd : F");
+    dword_5004 = 4;
+    if ( close(v6) < 0 )
+    {
+      v8 = "ConsumerIrHal";
+      v9 = "Fail to close fd : A (%d)";
+      goto LABEL_9;
+    }
   }
-  if ( dword_2004 >= 0 )
-  {
-    _android_log_print(
-      3,
-      "ConsumerIrHal",
-      "Consumer IR HAL is going to be loaded [Type : %s] [SOL : %d]",
-      "TIME",
-      dword_2004,
-      v12);
-    v10 = malloc(0x60u);
-    memset(v10, 0, 0x60u);
-    *(_DWORD *)v10 = 1213678676;
-    *((_DWORD *)v10 + 2) = v3;
-    *((_DWORD *)v10 + 15) = sub_878;
-    *((_DWORD *)v10 + 16) = sub_BC0;
-    *((_DWORD *)v10 + 17) = sub_854;
-    *((_DWORD *)v10 + 18) = sub_858;
-    *v4 = v10;
-    return v5;
-  }
-  v8 = "ConsumerIrHal";
-  v9 = "Consumer IR Hal is failed to load !";
-LABEL_11:
-  _android_log_print(6, v8, v9);
-  return -2;
+LABEL_10:
+  if ( dword_5004 < 0 )
+    _android_log_print(6, "ConsumerIrHal", "Consumer IR Hal is failed to load! (Can't find any Ir solution.)");
+  _android_log_print(
+    3,
+    "ConsumerIrHal",
+    "Consumer IR HAL is going to be loaded [Type : %s] [SOL : %d]",
+    "TIME",
+    dword_5004,
+    v13,
+    v14);
+  v10 = malloc(0x60u);
+  memset(v10, 0, 0x60u);
+  *(_DWORD *)v10 = 1213678676;
+  *((_DWORD *)v10 + 2) = v3;
+  *v4 = v10;
+  *((_DWORD *)v10 + 15) = sub_E04;
+  *((_DWORD *)v10 + 16) = sub_1190;
+  *((_DWORD *)v10 + 17) = sub_DE0;
+  *((_DWORD *)v10 + 18) = sub_DE4;
+  return v5;
 }
-// 6F4: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 700: using guessed type int __fastcall open(_DWORD, _DWORD);
-// 70C: using guessed type int __cdecl close(_DWORD, _DWORD);
-// 854: using guessed type int sub_854();
-// 2004: using guessed type int dword_2004;
+// B7C: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// 5004: using guessed type int dword_5004;
 
-//----- (000009B8) --------------------------------------------------------
-int __fastcall sub_9B8(int a1, int a2, int a3)
+//----- (00000F58) --------------------------------------------------------
+int __fastcall sub_F58(int a1, int *a2, int a3)
 {
-  int v3; // r5@1
-  int v4; // r10@1
-  int v5; // r4@1
-  int i; // r4@1
-  const char *v7; // r3@4
-  int result; // r0@7
-  signed int v9; // r11@9
-  int v10; // r0@10
-  int v11; // r5@10
-  _DWORD *v12; // r0@10
-  _DWORD *v13; // r4@10
-  _DWORD *v14; // r3@10
-  bool v15; // r2@15
-  int v16; // r0@21
-  int v17; // r1@21
-  int v18; // r0@23
-  int v19; // [sp+0h] [bp-1060h]@1
-  _DWORD *v20; // [sp+8h] [bp-1058h]@13
-  int v21; // [sp+14h] [bp-104Ch]@9
-  int v22; // [sp+18h] [bp-1048h]@9
-  int v23; // [sp+1Ch] [bp-1044h]@13
-  int v24; // [sp+20h] [bp-1040h]@16
-  int v25; // [sp+24h] [bp-103Ch]@6
-  char v26; // [sp+74h] [bp-FECh]@9
-  int v27; // [sp+1074h] [bp+14h]@1
-  int v28; // [sp+2074h] [bp+1014h]@1
+  int v3; // r10@1
+  int v4; // r7@1
+  int *v5; // r6@1
+  int v6; // ST00_4@1
+  __useconds_t v7; // r7@1
+  int v8; // r8@1
+  const char *v9; // r12@1
+  int v10; // r2@3
+  const char *v11; // r1@3
+  const char *v12; // ST14_4@5
+  int v13; // r0@5
+  int result; // r0@6
+  signed int v15; // r9@8
+  int v23; // r0@9
+  int v24; // r11@9
+  _DWORD *v25; // r0@9
+  _DWORD *v26; // r6@9
+  int v27; // r0@18
+  size_t v28; // r0@22
+  int v29; // [sp+10h] [bp-20A0h]@10
+  int v30; // [sp+1Ch] [bp-2094h]@8
+  int v31; // [sp+20h] [bp-2090h]@8
+  int v32; // [sp+24h] [bp-208Ch]@12
+  int v33; // [sp+28h] [bp-2088h]@14
+  int v34; // [sp+2Ch] [bp-2084h]@5
+  char dest; // [sp+7Ch] [bp-2034h]@8
+  int v36; // [sp+107Ch] [bp-1034h]@1
+  int v37; // [sp+207Ch] [bp-34h]@1
 
   v3 = a3;
-  v4 = a2;
-  v5 = a1;
-  v28 = _stack_chk_guard;
-  memset(&v27, 0, 0x1000u);
-  v19 = v5;
-  _sprintf_chk(&v27, 0, 4096, "%d,");
-  _strlen_chk(&v27, 4096);
-  for ( i = 0; i < v3; ++i )
+  v4 = a1;
+  v5 = a2;
+  v37 = _stack_chk_guard;
+  memset(&v36, 0, 0x1000u);
+  v6 = v4;
+  v7 = 0;
+  v8 = 0;
+  _sprintf_chk(&v36, 0, 4096, "%d,", v6);
+  _strlen_chk(&v36, 4096);
+  v9 = "%d%s";
+  while ( v8 < v3 )
   {
-    if ( i == v3 - 1 )
-      v7 = (const char *)&unk_D7F;
-    else
-      v7 = ",";
-    _sprintf_chk(&v25, 0, 80, "%d%s", *(_DWORD *)(v4 + 4 * i), v7);
-    if ( strlcat(&v27, &v25, 4096) >= 4096 )
+    v10 = *v5;
+    v11 = ",";
+    if ( v8 == v3 - 1 )
+      v11 = (const char *)&unk_3032;
+    v12 = v9;
+    ++v5;
+    _sprintf_chk(&v34, 0, 80, v9, v10, v11);
+    v7 += *(v5 - 1);
+    v13 = strlcat(&v36, &v34, 4096);
+    v9 = v12;
+    if ( v13 >= 4096 )
     {
       _android_log_print(6, "ConsumerIrHal", "Error: too many pattern\n");
       result = -7;
-      goto LABEL_26;
+      goto LABEL_20;
     }
+    ++v8;
   }
-  strcpy(&v26, "/sys/class/sec/sec_ir/ir_send");
-  clock_gettime(1, &v21);
-  v9 = 10;
-  v21 += (unsigned __int64)(v22 + 100000000) / *(_QWORD *)dword_B88;
-  v22 = (unsigned __int64)(v22 + 100000000) % *(_QWORD *)dword_B88;
-  do
+  v15 = 10;
+  strcpy(&dest, "/sys/class/sensors/irled_remote/irled_send");
+  clock_gettime(1, (struct timespec *)&v30);
+  HIDWORD(_R0) = v31;
+  _R6 = v31 + 100000000;
+  __asm
   {
-    v10 = open(&v26, 1);
-    v11 = v10;
-    v12 = (_DWORD *)_errno(v10);
-    v13 = v12;
-    v14 = (_DWORD *)*v12;
-    if ( v11 >= 0 )
+    VDUP.32         D8, R6
+    VSHR.S64        D8, D8, #0x20
+    VMOV            R0, R1, D8
+  }
+  _R0 = _R0 / *(_QWORD *)dword_1150;
+  v30 += _R0;
+  __asm { VMOV            R0, R1, D8 }
+  v31 = _R0 % *(_QWORD *)dword_1150;
+  while ( 1 )
+  {
+    v23 = open(&dest, 1);
+    v24 = v23;
+    v25 = (_DWORD *)_errno(v23);
+    v26 = v25;
+    if ( v24 >= 0 )
       break;
-    if ( *v12 != 4 )
+    v29 = *v25;
+    if ( *v25 != 4 && *v25 != 13 )
     {
-      v12 = (_DWORD *)*v12;
-      if ( v12 != (_DWORD *)13 )
+      clock_gettime(1, (struct timespec *)&v32);
+      if ( v32 > v30 || v32 == v30 && v33 > v31 )
       {
-        v20 = v14;
-        clock_gettime(1, &v23);
-        v12 = v20;
-        v15 = v23 > v21 || v23 == v21 && v24 > v22;
-        if ( v15 )
-        {
-          _android_log_print(6, "ConsumerIrHal", "Failed to open! (err=%d)", -(signed int)v20, v19);
-          result = -(signed int)v20;
-          goto LABEL_26;
-        }
+        _android_log_print(6, "ConsumerIrHal", "Failed to open! (err=%d)", -v29);
+        result = -v29;
+        goto LABEL_20;
       }
     }
-    sched_yield(v12);
-    --v9;
+    sched_yield();
+    if ( !--v15 )
+      goto LABEL_24;
   }
-  while ( v9 );
-  v16 = _strlen_chk(&v27, 4096);
-  if ( write(v11, &v27, v16) >= 0 )
+  v28 = _strlen_chk(&v36, 4096);
+  if ( write(v24, &v36, v28) >= 0 )
   {
-    v18 = close(v11, v17);
-    if ( !((v18 + 1 < 0) ^ __OFADD__(v18, 1)) )
+    v27 = close(v24);
+    if ( !((v27 + 1 < 0) ^ __OFADD__(v27, 1)) )
     {
+      _android_log_print(3, "ConsumerIrHal", "Wait for complete ir transmit (%d)", v7);
+      usleep(v7);
       result = 0;
-      goto LABEL_26;
+      goto LABEL_20;
     }
   }
   else
   {
-    close(v11, v17);
+    close(v24);
   }
-  result = -*v13;
-LABEL_26:
-  if ( v28 != _stack_chk_guard )
+LABEL_24:
+  result = -*v26;
+LABEL_20:
+  if ( v37 != _stack_chk_guard )
     _stack_chk_fail(result);
   return result;
 }
-// 6F4: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 700: using guessed type int __fastcall open(_DWORD, _DWORD);
-// 70C: using guessed type int __cdecl close(_DWORD, _DWORD);
-// 730: using guessed type int _sprintf_chk(_DWORD, _DWORD, _DWORD, const char *, ...);
-// 73C: using guessed type int __fastcall _strlen_chk(_DWORD, _DWORD);
-// 748: using guessed type int __fastcall strlcat(_DWORD, _DWORD, _DWORD);
-// 760: using guessed type int __fastcall clock_gettime(_DWORD, _DWORD);
-// 778: using guessed type int __cdecl _errno(_DWORD);
-// 784: using guessed type int __fastcall sched_yield(_DWORD);
-// 790: using guessed type int __fastcall write(_DWORD, _DWORD, _DWORD);
-// 79C: using guessed type int __fastcall _stack_chk_fail(_DWORD);
-// B88: using guessed type int dword_B88[2];
+// B7C: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// BB8: using guessed type int _sprintf_chk(_DWORD, _DWORD, _DWORD, const char *, ...);
+// BC4: using guessed type int __fastcall _strlen_chk(_DWORD, _DWORD);
+// BD0: using guessed type int __fastcall strlcat(_DWORD, _DWORD, _DWORD);
+// C00: using guessed type int __cdecl _errno(_DWORD);
+// C24: using guessed type int __fastcall _stack_chk_fail(_DWORD);
+// 1150: using guessed type int dword_1150[2];
 
-//----- (00000BC0) --------------------------------------------------------
-int __fastcall sub_BC0(int a1, int a2, int a3, int a4)
+//----- (00001190) --------------------------------------------------------
+int __fastcall sub_1190(int a1, int a2, int *a3, int a4)
 {
   int v4; // r4@1
-  int v5; // r6@1
+  int *v5; // r6@1
   int v6; // r7@1
   int v7; // r7@1
 
   v4 = a4;
   v5 = a3;
   v6 = a2;
-  _android_log_print(3, "ConsumerIrHal", "Consumer IR HAL is going to transmit - Type : %d", dword_2004, a4);
-  pthread_mutex_lock(&unk_208C);
-  v7 = sub_9B8(v6, v5, v4);
+  _android_log_print(3, "ConsumerIrHal", "Consumer IR HAL is going to transmit - Type : %d", dword_5004, a4);
+  pthread_mutex_lock((pthread_mutex_t *)&unk_508C);
+  v7 = sub_F58(v6, v5, v4);
   if ( v7 < 0 )
     _android_log_print(6, "ConsumerIrHal", "Consumer IR Transmit Failed. - CIR (err = %d)", v7);
-  pthread_mutex_unlock(&unk_208C);
+  pthread_mutex_unlock((pthread_mutex_t *)&unk_508C);
   return v7;
 }
-// 6F4: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
-// 7A8: using guessed type int __fastcall pthread_mutex_lock(_DWORD);
-// 7B4: using guessed type int __fastcall pthread_mutex_unlock(_DWORD);
-// 2004: using guessed type int dword_2004;
+// B7C: using guessed type int _android_log_print(_DWORD, _DWORD, const char *, ...);
+// 5004: using guessed type int dword_5004;
 
-// ALL OK, 7 function(s) have been successfully decompiled
+//----- (0000153C) --------------------------------------------------------
+signed int __fastcall sub_153C(int a1, int a2, unsigned int a3, int a4, int *a5)
+{
+  int v5; // r5@1
+  int v6; // r4@1
+  signed int result; // r0@2
+  int v8; // r2@4
+  int v9; // r0@4
+  int v10; // r1@4
+  __int64 v11; // r2@10
+  int v12; // r1@10
+
+  v5 = a3;
+  v6 = a1;
+  switch ( a2 )
+  {
+    case 0:
+      result = 2;
+      if ( a3 > 0xF || a4 )
+        return result;
+      v8 = *a5;
+      v9 = v6;
+      v10 = v5;
+      goto LABEL_14;
+    case 1:
+      if ( a4 == 5 )
+      {
+        if ( a3 <= 0x1F )
+          goto LABEL_21;
+        return 2;
+      }
+      if ( a4 != 1 || a3 > 0xF )
+        return 2;
+      sub_1B90(a1);
+LABEL_21:
+      v11 = *(_QWORD *)a5;
+      v12 = v5 + 256;
+LABEL_22:
+      result = sub_1B18(v6, v12, v11, SHIDWORD(v11));
+LABEL_23:
+      if ( result )
+        result = 2;
+      return result;
+    case 3:
+      result = 2;
+      if ( a3 > 0x1F || a4 != 5 )
+        return result;
+      v11 = *(_QWORD *)a5;
+      v12 = v5 + 112;
+      goto LABEL_22;
+    case 4:
+      result = 2;
+      if ( a3 > 3 || a4 )
+        return result;
+      v8 = *a5;
+      v10 = v5 + 192;
+      v9 = v6;
+LABEL_14:
+      result = sub_1AA4(v9, v10, v8);
+      goto LABEL_23;
+    default:
+      sub_1918(
+        (int)"_Unwind_VRS_Result _Unwind_VRS_Set(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepre"
+             "sentation, void *)",
+        831,
+        (int)"unsupported register class");
+      return result;
+  }
+}
+
+//----- (000015E0) --------------------------------------------------------
+signed int __fastcall sub_15E0(int a1, int a2, unsigned int a3, int a4)
+{
+  int v4; // r5@1
+  int v5; // r7@1
+  unsigned int v6; // r6@1
+  int v7; // r8@1
+  int v8; // r4@4
+  unsigned int v9; // r7@4
+  int *v10; // r0@6
+  signed int v11; // r0@6
+  signed int v12; // r1@6
+  signed int v13; // r2@6
+  signed int result; // r0@14
+  unsigned int v15; // r4@18
+  unsigned int v16; // r6@18
+  int v17; // r0@19
+  int v18; // r2@19
+  int v19; // r0@19
+  int v20; // r2@22
+  int v21; // [sp+8h] [bp-38h]@19
+  int v22; // [sp+Ch] [bp-34h]@19
+  int v23; // [sp+14h] [bp-2Ch]@16
+  int v24; // [sp+18h] [bp-28h]@6
+  int *v25; // [sp+1Ch] [bp-24h]@3
+
+  v4 = a2;
+  v5 = a4;
+  v6 = a3;
+  v7 = a1;
+  switch ( a2 )
+  {
+    case 0:
+    case 4:
+      if ( a4 || sub_1A74(a1, 13, &v25) )
+        return 2;
+      v8 = 0;
+      v9 = 0;
+      do
+      {
+        if ( (1 << v9) & v6 )
+        {
+          v10 = v25;
+          ++v25;
+          v24 = *v10;
+          v11 = sub_153C(v7, v4, v9, 0, &v24);
+          v12 = 0;
+          v13 = 0;
+          if ( v9 == 13 )
+            v12 = 1;
+          if ( !v4 )
+            v13 = 1;
+          if ( v11 )
+            return 2;
+          v8 |= v13 & v12;
+        }
+        ++v9;
+      }
+      while ( v9 < 0x10 );
+      if ( v8 & 1 )
+        return 0;
+      v20 = (int)v25;
+      goto LABEL_28;
+    case 1:
+    case 3:
+      if ( (a4 | 4) != 5 || sub_1A74(a1, 13, &v23) )
+        return 2;
+      if ( !(_WORD)v6 )
+        goto LABEL_21;
+      v15 = v6 >> 16;
+      v16 = (v6 >> 16) + v6;
+      break;
+    default:
+      sub_1918(
+        (int)"_Unwind_VRS_Result _Unwind_VRS_Pop(_Unwind_Context *, _Unwind_VRS_RegClass, uint32_t, _Unwind_VRS_DataRepresentation)",
+        965,
+        (int)"unsupported register class");
+      return result;
+  }
+  do
+  {
+    v17 = v23;
+    v23 += 4;
+    v18 = *(_DWORD *)v17;
+    v23 = v17 + 8;
+    v19 = *(_DWORD *)(v17 + 4);
+    v21 = v18;
+    v22 = v19;
+    if ( sub_153C(v7, v4, v15, v5, &v21) )
+      return 2;
+    ++v15;
+  }
+  while ( v15 < v16 );
+LABEL_21:
+  if ( v5 == 1 )
+  {
+    v20 = v23 + 4;
+    v23 += 4;
+  }
+  else
+  {
+    v20 = v23;
+  }
+LABEL_28:
+  result = sub_1AA4(v7, 13, v20);
+  if ( result )
+    result = 2;
+  return result;
+}
+
+//----- (000017FC) --------------------------------------------------------
+signed int __fastcall sub_17FC(int a1, int a2, char a3)
+{
+  int v3; // r4@1
+  char v4; // r10@1
+  signed int i; // r6@1
+  signed int v6; // r7@3
+  int v7; // r0@8
+  int (__fastcall *v8)(signed int, int, char *); // r3@11
+  int v9; // r0@12
+  int v11; // [sp+0h] [bp-4B0h]@17
+  int v12; // [sp+4h] [bp-4ACh]@10
+  int (__fastcall *v13)(signed int, int, char *); // [sp+10h] [bp-4A0h]@11
+  int v14; // [sp+18h] [bp-498h]@12
+  int v15; // [sp+24h] [bp-48Ch]@12
+  int v16; // [sp+2Ch] [bp-484h]@10
+  char v17; // [sp+30h] [bp-480h]@1
+
+  v3 = a2;
+  v4 = a3;
+  sub_1A24((int)&v17);
+  for ( i = 1; ; --i )
+  {
+    v6 = 1;
+    if ( v4 & 1 )
+    {
+      v6 = 2;
+      if ( !i )
+      {
+        sub_1AA4((int)&v17, -1, *(_DWORD *)(v3 + 16));
+        v4 = 0;
+      }
+    }
+    v7 = sub_1B50((int)&v17);
+    if ( !v7 )
+      break;
+    if ( v7 < 0 )
+      return 2;
+    sub_1A74((int)&v17, -2, &v16);
+    if ( sub_1B58((int)&v17, (int)&v12) )
+      return 2;
+    v8 = v13;
+    if ( v13 )
+    {
+      *(_DWORD *)(v3 + 72) = v12;
+      *(_DWORD *)(v3 + 76) = v15;
+      *(_DWORD *)(v3 + 80) = v14;
+      v9 = v8(v6, v3, &v17);
+      if ( v9 == 7 )
+      {
+        sub_1A74((int)&v17, -1, &v11);
+        *(_DWORD *)(v3 + 16) = v11;
+        sub_1B78((int)&v17);
+        return 2;
+      }
+      if ( v9 == 9 )
+        abort();
+      if ( v9 != 8 )
+        return 2;
+      if ( v16 == *(_DWORD *)(v3 + 32) )
+        sub_1918(
+          (int)"_Unwind_Reason_Code unwind_phase2(unw_context_t *, _Unwind_Exception *, bool)",
+          642,
+          (int)"during phase1 personality function said it would stop here, but now in phase2 it did not stop here");
+    }
+  }
+  return 5;
+}
+
+//----- (00001918) --------------------------------------------------------
+void __fastcall sub_1918(int a1, int a2, int a3)
+{
+  fprintf((FILE *)stderr, "libunwind: %s %s:%d - %s\n", a1, "external/libcxxabi/src/Unwind/Unwind-EHABI.cpp", a2, a3);
+  abort();
+}
+
+//----- (0000199C) --------------------------------------------------------
+int __fastcall sub_199C(int a1, int a2, int a3, int a4, int a5)
+{
+  int v5; // r4@0
+  int v6; // r5@0
+  int v7; // r6@0
+  int v8; // r7@0
+  int v9; // r8@0
+  int v10; // r9@0
+  int v11; // r10@0
+  int v12; // r11@0
+  int v13; // r12@0
+  int v14; // lr@0
+
+  *(_DWORD *)a1 = a1;
+  *(_DWORD *)(a1 + 4) = a2;
+  *(_DWORD *)(a1 + 8) = a3;
+  *(_DWORD *)(a1 + 12) = a4;
+  *(_DWORD *)(a1 + 16) = v5;
+  *(_DWORD *)(a1 + 20) = v6;
+  *(_DWORD *)(a1 + 24) = v7;
+  *(_DWORD *)(a1 + 28) = v8;
+  *(_DWORD *)(a1 + 32) = v9;
+  *(_DWORD *)(a1 + 36) = v10;
+  *(_DWORD *)(a1 + 40) = v11;
+  *(_DWORD *)(a1 + 44) = v12;
+  *(_DWORD *)(a1 + 48) = v13;
+  *(_DWORD *)(a1 + 52) = &a5;
+  *(_DWORD *)(a1 + 56) = v14;
+  *(_DWORD *)(a1 + 60) = v14;
+  return 0;
+}
+
+//----- (000019B4) --------------------------------------------------------
+int __fastcall sub_19B4(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VSTMIA          R0, {D0-D15} }
+  return result;
+}
+
+//----- (000019BC) --------------------------------------------------------
+int __fastcall sub_19BC(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VSTMIA          R0, {D0-D15} }
+  return result;
+}
+
+//----- (000019C4) --------------------------------------------------------
+int __fastcall sub_19C4(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VSTMIA          R0, {D16-D31} }
+  return result;
+}
+
+//----- (000019CC) --------------------------------------------------------
+void sub_19CC()
+{
+  __asm
+  {
+    STCL            p1, c0, [R0],#8
+    STCL            p1, c1, [R0],#8
+    STCL            p1, c2, [R0],#8
+    STCL            p1, c3, [R0],#8
+    STCL            p1, c4, [R0],#8
+    STCL            p1, c5, [R0],#8
+    STCL            p1, c6, [R0],#8
+    STCL            p1, c7, [R0],#8
+    STCL            p1, c8, [R0],#8
+    STCL            p1, c9, [R0],#8
+    STCL            p1, c10, [R0],#8
+    STCL            p1, c11, [R0],#8
+    STCL            p1, c12, [R0],#8
+    STCL            p1, c13, [R0],#8
+    STCL            p1, c14, [R0],#8
+    STCL            p1, c15, [R0],#8
+  }
+}
+
+//----- (00001A10) --------------------------------------------------------
+void sub_1A10()
+{
+  __asm
+  {
+    STC2            p1, c8, [R0],#4
+    STC2            p1, c9, [R0],#4
+    STC2            p1, c10, [R0],#4
+    STC2            p1, c11, [R0],#4
+  }
+}
+
+//----- (00001A24) --------------------------------------------------------
+int __fastcall sub_1A24(int a1)
+{
+  int v1; // r4@1
+
+  v1 = a1;
+  *(_DWORD *)a1 = &off_4DEC;
+  *(_DWORD *)(a1 + 4) = &unk_5090;
+  *(_BYTE *)(a1 + 76) = 0;
+  *(_DWORD *)(a1 + 72) = 0;
+  _aeabi_memcpy(a1 + 8);
+  _aeabi_memset(v1 + 80, 450, 0);
+  sub_1FA8(v1, 0);
+  return 0;
+}
+// C6C: using guessed type int __fastcall _aeabi_memcpy(_DWORD);
+// C78: using guessed type int __fastcall _aeabi_memset(_DWORD, _DWORD, _DWORD);
+// 4DEC: using guessed type void *;
+
+//----- (00001A74) --------------------------------------------------------
+signed int __fastcall sub_1A74(int a1, int a2, _DWORD *a3)
+{
+  int v3; // r6@1
+  _DWORD *v4; // r4@1
+  int v5; // r5@1
+  signed int result; // r0@2
+
+  v3 = a1;
+  v4 = a3;
+  v5 = a2;
+  if ( (*(int (**)(void))(*(_DWORD *)a1 + 8))() == 1 )
+  {
+    *v4 = (*(int (__fastcall **)(int, int))(*(_DWORD *)v3 + 12))(v3, v5);
+    result = 0;
+  }
+  else
+  {
+    result = -6542;
+  }
+  return result;
+}
+
+//----- (00001AA4) --------------------------------------------------------
+signed int __fastcall sub_1AA4(int a1, int a2, int a3)
+{
+  int v3; // r4@1
+  int v4; // r6@1
+  int v5; // r5@1
+  signed int v6; // r5@3
+
+  v3 = a1;
+  v4 = a3;
+  v5 = a2;
+  if ( (*(int (**)(void))(*(_DWORD *)a1 + 8))() == 1 )
+  {
+    (*(void (__fastcall **)(int, int, int))(*(_DWORD *)v3 + 16))(v3, v5, v4);
+    if ( v5 == -1 )
+    {
+      v6 = 0;
+      (*(void (__fastcall **)(int, _DWORD))(*(_DWORD *)v3 + 52))(v3, 0);
+    }
+    else
+    {
+      v6 = 0;
+    }
+  }
+  else
+  {
+    v6 = -6542;
+  }
+  return v6;
+}
+
+//----- (00001AE8) --------------------------------------------------------
+signed int __fastcall sub_1AE8(int a1, int a2, _QWORD *a3)
+{
+  int v3; // r6@1
+  _QWORD *v4; // r4@1
+  int v5; // r5@1
+  __int64 v6; // r0@2
+  signed int result; // r0@2
+
+  v3 = a1;
+  v4 = a3;
+  v5 = a2;
+  if ( (*(int (**)(void))(*(_DWORD *)a1 + 20))() == 1 )
+  {
+    LODWORD(v6) = (*(int (__fastcall **)(int, int))(*(_DWORD *)v3 + 24))(v3, v5);
+    *v4 = v6;
+    result = 0;
+  }
+  else
+  {
+    result = -6542;
+  }
+  return result;
+}
+
+//----- (00001B18) --------------------------------------------------------
+signed int __fastcall sub_1B18(int a1, int a2, int a3, int a4)
+{
+  int v4; // r7@1
+  int v5; // r5@1
+  int v6; // r6@1
+  int v7; // r8@1
+  signed int result; // r0@2
+
+  v4 = a1;
+  v5 = a3;
+  v6 = a2;
+  v7 = a4;
+  if ( (*(int (**)(void))(*(_DWORD *)a1 + 20))() == 1 )
+  {
+    (*(void (__fastcall **)(int, int, int, int))(*(_DWORD *)v4 + 28))(v4, v6, v5, v7);
+    result = 0;
+  }
+  else
+  {
+    result = -6542;
+  }
+  return result;
+}
+
+//----- (00001B50) --------------------------------------------------------
+int __fastcall sub_1B50(int a1)
+{
+  return (*(int (**)(void))(*(_DWORD *)a1 + 32))();
+}
+
+//----- (00001B58) --------------------------------------------------------
+signed int __fastcall sub_1B58(int a1, int a2)
+{
+  int v2; // r4@1
+  signed int result; // r0@1
+
+  v2 = a2;
+  (*(void (**)(void))(*(_DWORD *)a1 + 36))();
+  result = 0;
+  if ( !*(_DWORD *)(v2 + 4) )
+    result = -6549;
+  return result;
+}
+
+//----- (00001B78) --------------------------------------------------------
+signed int __fastcall sub_1B78(int a1)
+{
+  (*(void (**)(void))(*(_DWORD *)a1 + 40))();
+  return -6540;
+}
+
+//----- (00001B90) --------------------------------------------------------
+int __fastcall sub_1B90(int a1)
+{
+  return (*(int (**)(void))(*(_DWORD *)a1 + 60))();
+}
+
+//----- (00001BA0) --------------------------------------------------------
+int __fastcall sub_1BA0(int a1, int a2)
+{
+  signed int v2; // r2@1
+  bool v3; // zf@1
+  signed int v4; // r0@1
+  unsigned int v5; // r1@1
+
+  v2 = 0;
+  v3 = (a2 & 0xFFFFFFFC) == 192;
+  v4 = 0;
+  v5 = a2 - 16;
+  if ( v3 )
+    v4 = 1;
+  if ( v5 > 0xFFFFFFED )
+    v2 = 1;
+  return v4 | v2;
+}
+
+//----- (00001BC4) --------------------------------------------------------
+int __fastcall sub_1BC4(int a1, signed int a2)
+{
+  signed int v2; // r5@1
+  int v3; // r4@1
+  int v4; // r0@7
+
+  v2 = a2;
+  v3 = a1;
+  if ( a2 >= -1 )
+  {
+    if ( a2 > 13 )
+    {
+      if ( a2 == 14 )
+      {
+        v4 = a1 + 64;
+        return *(_DWORD *)v4;
+      }
+      if ( a2 != 15 )
+        goto LABEL_12;
+    }
+    else if ( a2 != -1 )
+    {
+      if ( a2 != 13 )
+        goto LABEL_12;
+LABEL_7:
+      v4 = a1 + 60;
+      return *(_DWORD *)v4;
+    }
+    v4 = a1 + 68;
+    return *(_DWORD *)v4;
+  }
+  if ( a2 == -2 )
+    goto LABEL_7;
+LABEL_12:
+  if ( (unsigned int)a2 > 0xC )
+  {
+    if ( (a2 & 0xFFFFFFFC) != 192 )
+      sub_2004(
+        (int)"uint32_t libunwind::Registers_arm::getRegister(int)",
+        (int)"external/libcxxabi/src/Unwind/Registers.hpp",
+        1452,
+        (int)"unsupported arm register");
+    if ( !*(_BYTE *)(a1 + 76) )
+    {
+      *(_BYTE *)(a1 + 76) = 1;
+      sub_1A10();
+    }
+    v4 = v3 + 4 * v2 - 296;
+  }
+  else
+  {
+    v4 = a1 + 4 * a2 + 8;
+  }
+  return *(_DWORD *)v4;
+}
+
+//----- (00001C60) --------------------------------------------------------
+int __fastcall sub_1C60(int result, signed int a2, int a3)
+{
+  signed int v3; // r6@1
+  int v4; // r4@1
+  int v5; // r5@1
+
+  v3 = a2;
+  v4 = a3;
+  v5 = result;
+  if ( a2 >= -1 )
+  {
+    if ( a2 > 13 )
+    {
+      if ( a2 == 14 )
+      {
+        *(_DWORD *)(result + 64) = a3;
+        return result;
+      }
+      if ( a2 != 15 )
+        goto LABEL_12;
+    }
+    else if ( a2 != -1 )
+    {
+      if ( a2 != 13 )
+        goto LABEL_12;
+LABEL_7:
+      *(_DWORD *)(result + 60) = a3;
+      return result;
+    }
+    *(_DWORD *)(result + 68) = a3;
+    return result;
+  }
+  if ( a2 == -2 )
+    goto LABEL_7;
+LABEL_12:
+  if ( (unsigned int)a2 > 0xC )
+  {
+    if ( (a2 & 0xFFFFFFFC) != 192 )
+      sub_2004(
+        (int)"void libunwind::Registers_arm::setRegister(int, uint32_t)",
+        (int)"external/libcxxabi/src/Unwind/Registers.hpp",
+        1471,
+        (int)"unsupported arm register");
+    if ( !*(_BYTE *)(result + 76) )
+    {
+      *(_BYTE *)(result + 76) = 1;
+      sub_1A10();
+    }
+    result = v5 + 4 * v3;
+    *(_DWORD *)(result - 296) = v4;
+  }
+  else
+  {
+    result += 4 * a2;
+    *(_DWORD *)(result + 8) = a3;
+  }
+  return result;
+}
+
+//----- (00001CF8) --------------------------------------------------------
+int __fastcall sub_1CF8(int a1, int a2)
+{
+  signed int v2; // r2@1
+  bool v3; // zf@1
+  signed int v4; // r0@1
+  unsigned int v5; // r1@1
+
+  v2 = 0;
+  v3 = (a2 & 0xFFFFFFF0) == 112;
+  v4 = 0;
+  v5 = a2 & 0xFFFFFFE0;
+  if ( v3 )
+    v4 = 1;
+  if ( v5 == 256 )
+    v2 = 1;
+  return v4 | v2;
+}
+
+//----- (00001D1C) --------------------------------------------------------
+__int64 __fastcall sub_1D1C(int a1, int a2)
+{
+  int v2; // r4@1
+  int v3; // r5@1
+  unsigned int v4; // r0@1
+  int v5; // r0@5
+  int v6; // r0@11
+
+  v2 = a2;
+  v3 = a1;
+  v4 = a2 & 0xFFFFFFF0;
+  if ( (a2 & 0xFFFFFFF0) == 112 )
+  {
+    if ( !*(_BYTE *)(v3 + 75) )
+    {
+      *(_BYTE *)(v3 + 75) = 1;
+      sub_19CC();
+    }
+    v5 = v3 + 8 * v2 - 552;
+  }
+  else if ( v4 == 272 )
+  {
+    if ( !*(_BYTE *)(v3 + 74) )
+    {
+      *(_BYTE *)(v3 + 74) = 1;
+      sub_19C4(v3 + 216);
+    }
+    v5 = v3 + 8 * v2 - 1960;
+  }
+  else
+  {
+    if ( v4 != 256 )
+      sub_2004(
+        (int)"unw_fpreg_t libunwind::Registers_arm::getFloatRegister(int)",
+        (int)"external/libcxxabi/src/Unwind/Registers.hpp",
+        1673,
+        (int)"Unknown ARM float register");
+    if ( !*(_BYTE *)(v3 + 73) )
+    {
+      *(_BYTE *)(v3 + 73) = 1;
+      v6 = v3 + 80;
+      if ( *(_BYTE *)(v3 + 72) )
+        sub_19BC(v6);
+      else
+        sub_19B4(v6);
+    }
+    v5 = v3 + 8 * v2 - 1968;
+  }
+  return *(_QWORD *)v5;
+}
+
+//----- (00001DCC) --------------------------------------------------------
+int __fastcall sub_1DCC(int a1, int a2, int a3, int a4)
+{
+  int v4; // r6@1
+  int v5; // r7@1
+  unsigned int v6; // r0@1
+  int v7; // r5@1
+  int v8; // r4@1
+  int result; // r0@5
+  int v10; // r1@5
+  int v11; // r0@11
+
+  v4 = a2;
+  v5 = a1;
+  v6 = a2 & 0xFFFFFFF0;
+  v7 = a4;
+  v8 = a3;
+  if ( (a2 & 0xFFFFFFF0) == 112 )
+  {
+    if ( !*(_BYTE *)(v5 + 75) )
+    {
+      *(_BYTE *)(v5 + 75) = 1;
+      sub_19CC();
+    }
+    result = v5 + 8 * v4;
+    *(_DWORD *)(result - 548) = v7;
+    LOWORD(v10) = -552;
+  }
+  else if ( v6 == 272 )
+  {
+    if ( !*(_BYTE *)(v5 + 74) )
+    {
+      *(_BYTE *)(v5 + 74) = 1;
+      sub_19C4(v5 + 216);
+    }
+    result = v5 + 8 * v4;
+    *(_DWORD *)(result - 1828) = v7;
+    LOWORD(v10) = -1832;
+  }
+  else
+  {
+    if ( v6 != 256 )
+      sub_2004(
+        (int)"void libunwind::Registers_arm::setFloatRegister(int, unw_fpreg_t)",
+        (int)"external/libcxxabi/src/Unwind/Registers.hpp",
+        1700,
+        (int)"Unknown ARM float register");
+    if ( !*(_BYTE *)(v5 + 73) )
+    {
+      *(_BYTE *)(v5 + 73) = 1;
+      v11 = v5 + 80;
+      if ( *(_BYTE *)(v5 + 72) )
+        sub_19BC(v11);
+      else
+        sub_19B4(v11);
+    }
+    result = v5 + 8 * v4;
+    *(_DWORD *)(result - 1964) = v7;
+    LOWORD(v10) = -1968;
+  }
+  HIWORD(v10) = -1;
+  *(_DWORD *)(result + v10) = v8;
+  return result;
+}
+
+//----- (00001EA0) --------------------------------------------------------
+signed int __fastcall sub_1EA0(int a1)
+{
+  int v1; // r4@1
+  signed int result; // r0@3
+  void (__fastcall *v3)(int, signed int, int); // r5@5
+  int v4; // r0@5
+
+  v1 = a1;
+  if ( *(_BYTE *)(a1 + 528)
+    || ((*(void (__fastcall **)(int, signed int))(*(_DWORD *)a1 + 52))(a1, 1), *(_BYTE *)(v1 + 528)) )
+  {
+    result = 0;
+  }
+  else
+  {
+    if ( *(_DWORD *)(v1 + 504) )
+    {
+      v3 = *(void (__fastcall **)(int, signed int, int))(*(_DWORD *)v1 + 16);
+      v4 = (*(int (__fastcall **)(int, signed int))(*(_DWORD *)v1 + 12))(v1, -2);
+      v3(v1, -2, *(_DWORD *)(v1 + 504) + v4);
+    }
+    result = 1;
+  }
+  return result;
+}
+
+//----- (00001EEC) --------------------------------------------------------
+int __fastcall sub_1EEC(int a1, int a2)
+{
+  int v2; // r3@1
+  int v3; // r4@1
+  int v4; // r5@1
+  int v5; // r12@1
+  int v6; // lr@1
+  int v7; // r4@1
+  int v8; // r2@1
+  int v9; // r3@1
+  int v10; // r5@1
+  int result; // r0@1
+
+  v2 = *(_DWORD *)(a1 + 504);
+  v3 = *(_DWORD *)(a1 + 496);
+  v4 = *(_DWORD *)(a1 + 500);
+  v5 = *(_DWORD *)(a1 + 488);
+  v6 = *(_DWORD *)(a1 + 492);
+  *(_DWORD *)(a2 + 20) = *(_DWORD *)(a1 + 508);
+  *(_DWORD *)(a2 + 16) = v2;
+  *(_DWORD *)(a2 + 12) = v4;
+  *(_DWORD *)(a2 + 8) = v3;
+  v7 = a2 + 24;
+  *(_DWORD *)a2 = v5;
+  *(_DWORD *)(a2 + 4) = v6;
+  v8 = *(_DWORD *)(a1 + 512);
+  v9 = *(_DWORD *)(a1 + 516);
+  v10 = *(_DWORD *)(a1 + 520);
+  result = *(_DWORD *)(a1 + 524);
+  *(_DWORD *)(a2 + 36) = result;
+  *(_DWORD *)v7 = v8;
+  *(_DWORD *)(v7 + 4) = v9;
+  *(_DWORD *)(v7 + 8) = v10;
+  return result;
+}
+
+//----- (00001F2C) --------------------------------------------------------
+void __fastcall sub_1F2C(int a1)
+{
+  sub_2038(a1 + 8);
+  sub_2D14();
+}
+
+//----- (00001F44) --------------------------------------------------------
+int __fastcall sub_1F44(int a1)
+{
+  return *(_BYTE *)(a1 + 529);
+}
+
+//----- (00001F4C) --------------------------------------------------------
+signed int __fastcall sub_1F4C(int a1, int a2, int a3, _DWORD *a4)
+{
+  int v4; // r6@1
+  int v5; // r5@1
+  _DWORD *v6; // r4@1
+  int v7; // r7@1
+  signed int result; // r0@3
+  int v9; // [sp+10h] [bp-20h]@2
+  int v10; // [sp+14h] [bp-1Ch]@3
+
+  v4 = a2;
+  v5 = a3;
+  v6 = a4;
+  v7 = (*(int (**)(void))(*(_DWORD *)a1 + 12))();
+  if ( dladdr() && v9 )
+  {
+    _snprintf_chk(v4, v5, 0, -1);
+    *v6 = v7 - v10;
+    result = 1;
+  }
+  else
+  {
+    result = 0;
+  }
+  return result;
+}
+// C84: using guessed type int dladdr(void);
+// C90: using guessed type int __fastcall _snprintf_chk(_DWORD, _DWORD, _DWORD, _DWORD);
+
+//----- (00001FA8) --------------------------------------------------------
+int __fastcall sub_1FA8(int a1, int a2)
+{
+  int v2; // r4@1
+  int v3; // r6@1
+  unsigned int v4; // r5@1
+  int result; // r0@5
+  int v6; // [sp+4h] [bp-1Ch]@3
+  int v7; // [sp+8h] [bp-18h]@3
+  int v8; // [sp+Ch] [bp-14h]@1
+
+  v2 = a1;
+  v3 = a2;
+  v4 = (*(int (**)(void))(*(_DWORD *)a1 + 12))() & 0xFFFFFFFE;
+  v8 = 0;
+  if ( v3 )
+    --v4;
+  v6 = _gnu_Unwind_Find_exidx(v4, &v8);
+  v7 = v8;
+  if ( !v6 || !v8 || (result = ((int (__fastcall *)(int, unsigned int, int *))sub_2088)(v2, v4, &v6)) == 0 )
+  {
+    result = 1;
+    *(_BYTE *)(v2 + 528) = 1;
+  }
+  return result;
+}
+// C9C: using guessed type int __fastcall _gnu_Unwind_Find_exidx(_DWORD, _DWORD);
+// 2088: using guessed type int sub_2088();
+
+//----- (00001FF4) --------------------------------------------------------
+const char *__fastcall sub_1FF4(int a1, signed int a2)
+{
+  const char *result; // r0@2
+  signed int v3; // r0@3
+  int *v4; // r1@3
+
+  if ( a2 > 255 )
+  {
+    switch ( a2 )
+    {
+      case 256:
+        v3 = -6117;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 257:
+        v3 = -6114;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 258:
+        v3 = -6111;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 259:
+        v3 = -6108;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 260:
+        v3 = -6105;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 261:
+        v3 = -6102;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 262:
+        v3 = -6099;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 263:
+        v3 = -6096;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 264:
+        v3 = -6093;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 265:
+        v3 = -6090;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 266:
+        v3 = -6087;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 267:
+        v3 = -6083;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 268:
+        v3 = -6079;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 269:
+        v3 = -6075;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 270:
+        v3 = -6071;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 271:
+        v3 = -6067;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 272:
+        v3 = -6063;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 273:
+        v3 = -6059;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 274:
+        v3 = -6055;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 275:
+        v3 = -6051;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 276:
+        v3 = -6047;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 277:
+        v3 = -6043;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 278:
+        v3 = -6039;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 279:
+        v3 = -6035;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 280:
+        v3 = -6031;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 281:
+        v3 = -6027;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 282:
+        v3 = -6023;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 283:
+        v3 = -6019;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 284:
+        v3 = -6015;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 285:
+        v3 = -6011;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 286:
+        v3 = -6007;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 287:
+        v3 = -6003;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      default:
+def_2364:
+        v3 = -5999;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+    }
+  }
+  else
+  {
+    result = "pc";
+    switch ( a2 + 2 )
+    {
+      case 0:
+      case 15:
+        v3 = -6280;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        return (char *)v4 + v3;
+      default:
+        goto def_2364;
+      case 1:
+      case 17:
+        return result;
+      case 2:
+        v3 = -6277;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 3:
+        v3 = -6274;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 4:
+        v3 = -6271;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 5:
+        v3 = -6268;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 6:
+        v3 = -6265;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 7:
+        v3 = -6262;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 8:
+        v3 = -6259;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 9:
+        v3 = -6256;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 10:
+        v3 = -6253;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 11:
+        v3 = -6250;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 12:
+        v3 = -6247;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 13:
+        v3 = -6243;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 14:
+        v3 = -6239;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 16:
+        v3 = -6283;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 66:
+        v3 = -6235;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 67:
+        v3 = -6232;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 68:
+        v3 = -6229;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 69:
+        v3 = -6226;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 70:
+        v3 = -6223;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 71:
+        v3 = -6220;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 72:
+        v3 = -6217;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 73:
+        v3 = -6214;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 74:
+        v3 = -6211;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 75:
+        v3 = -6208;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 76:
+        v3 = -6205;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 77:
+        v3 = -6201;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 78:
+        v3 = -6197;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 79:
+        v3 = -6193;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 80:
+        v3 = -6189;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 81:
+        v3 = -6185;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 82:
+        v3 = -6181;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 83:
+        v3 = -6177;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 84:
+        v3 = -6173;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 85:
+        v3 = -6169;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 86:
+        v3 = -6165;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 87:
+        v3 = -6161;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 88:
+        v3 = -6157;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 89:
+        v3 = -6153;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 90:
+        v3 = -6149;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 91:
+        v3 = -6145;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 92:
+        v3 = -6141;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 93:
+        v3 = -6137;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 94:
+        v3 = -6133;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 95:
+        v3 = -6129;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 96:
+        v3 = -6125;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+      case 97:
+        v3 = -6121;
+        v4 = &GLOBAL_OFFSET_TABLE_;
+        break;
+    }
+  }
+  return (char *)v4 + v3;
+}
+// 4F5C: using guessed type int GLOBAL_OFFSET_TABLE_;
+
+//----- (00001FFC) --------------------------------------------------------
+int __fastcall sub_1FFC(int result)
+{
+  *(_BYTE *)(result + 72) = 1;
+  return result;
+}
+
+//----- (00002004) --------------------------------------------------------
+void __fastcall sub_2004(int a1, int a2, int a3, int a4)
+{
+  fprintf((FILE *)stderr, "libunwind: %s %s:%d - %s\n", a1, a2, a3, a4);
+  abort();
+}
+
+//----- (00002038) --------------------------------------------------------
+int __fastcall sub_2038(int a1)
+{
+  int v1; // r4@1
+  int v2; // r0@2
+  int result; // r0@9
+
+  v1 = a1;
+  if ( *(_BYTE *)(a1 + 65) )
+  {
+    v2 = a1 + 72;
+    if ( *(_BYTE *)(v1 + 64) )
+      sub_290C(v2);
+    else
+      sub_2904(v2);
+  }
+  if ( *(_BYTE *)(v1 + 66) )
+    sub_2914(v1 + 208);
+  if ( *(_BYTE *)(v1 + 67) )
+    sub_291C((_DWORD *)(v1 + 336));
+  result = *(_BYTE *)(v1 + 68);
+  if ( *(_BYTE *)(v1 + 68) )
+    result = sub_2D24((_DWORD *)(v1 + 464));
+  return result;
+}
+
+//----- (00002218) --------------------------------------------------------
+int __fastcall sub_2218(int result, int a2, int a3, _DWORD *a4, int a5, int a6, int a7, _DWORD *a8)
+{
+  unsigned int v8; // r4@1
+  unsigned int v9; // r5@2
+  int v10; // r6@3
+
+  v8 = a5 - a2;
+  while ( 1 )
+  {
+    v9 = v8;
+    if ( !v8 )
+      break;
+    v10 = a2 + (v8 >> 1);
+    v8 >>= 1;
+    if ( *a8 >= *a4 + 8 * v10 + (2 * *(_DWORD *)(*a4 + 8 * v10) & 0x80000000 | *(_DWORD *)(*a4 + 8 * v10)) )
+    {
+      v8 = v9 - 1 - v8;
+      a2 = v10 + 1;
+    }
+  }
+  *(_DWORD *)result = a2;
+  *(_DWORD *)(result + 4) = a3;
+  *(_DWORD *)(result + 8) = a4;
+  return result;
+}
+
+//----- (00002904) --------------------------------------------------------
+int __fastcall sub_2904(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VLDMIA          R0, {D0-D15} }
+  return result;
+}
+
+//----- (0000290C) --------------------------------------------------------
+int __fastcall sub_290C(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VLDMIA          R0, {D0-D15} }
+  return result;
+}
+
+//----- (00002914) --------------------------------------------------------
+int __fastcall sub_2914(int _R0)
+{
+  int result; // r0@1
+
+  __asm { VLDMIA          R0, {D16-D31} }
+  return result;
+}
+
+//----- (0000291C) --------------------------------------------------------
+int __fastcall sub_291C(_DWORD *a1)
+{
+  int *v5; // r0@1
+  int result; // r0@1
+
+  _T1 = *a1;
+  v5 = a1 + 2;
+  __asm { LDCL            p1, c0, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c1, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c2, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c3, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c4, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c5, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c6, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c7, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c8, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c9, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c10, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c11, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c12, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c13, [R0],#8 }
+  _T1 = *v5;
+  v5 += 2;
+  __asm { LDCL            p1, c14, [R0],#8 }
+  _T1 = *v5;
+  result = (int)(v5 + 2);
+  __asm { LDCL            p1, c15, [R0],#8 }
+  return result;
+}
+
+//----- (00002960) --------------------------------------------------------
+int __fastcall sub_2960(_DWORD *a1)
+{
+  int *v5; // r0@1
+  int result; // r0@1
+
+  _T1 = *a1;
+  v5 = a1 + 1;
+  __asm { LDC2            p1, c8, [R0],#4 }
+  _T1 = *v5;
+  ++v5;
+  __asm { LDC2            p1, c9, [R0],#4 }
+  _T1 = *v5;
+  ++v5;
+  __asm { LDC2            p1, c10, [R0],#4 }
+  _T1 = *v5;
+  result = (int)(v5 + 1);
+  __asm { LDC2            p1, c11, [R0],#4 }
+  return result;
+}
+
+//----- (000029B0) --------------------------------------------------------
+int _aeabi_ldiv0()
+{
+  return raise(8);
+}
+
+//----- (000029C0) --------------------------------------------------------
+signed __int64 __fastcall _gnu_ldivmod_helper(signed __int64 a1, signed __int64 a2, _QWORD *a3)
+{
+  signed __int64 v3; // r4@1
+  signed __int64 result; // r0@1
+
+  v3 = a1;
+  result = a1 / a2;
+  *a3 = v3 - result * a2;
+  return result;
+}
+
+//----- (000029FC) --------------------------------------------------------
+unsigned __int64 __fastcall _gnu_uldivmod_helper(unsigned __int64 a1, unsigned __int64 a2, _QWORD *a3)
+{
+  unsigned __int64 v3; // r6@1
+  unsigned __int64 result; // r0@1
+
+  v3 = a1;
+  result = a1 / a2;
+  *a3 = v3 - result * a2;
+  return result;
+}
+
+//----- (00002CDC) --------------------------------------------------------
+unsigned int __fastcall _lshrdi3(unsigned int a1, unsigned int a2, int a3)
+{
+  unsigned int result; // r0@2
+
+  if ( a3 - 32 >= 0 )
+    result = a2 >> (a3 - 32);
+  else
+    result = a1 >> a3;
+  if ( a3 - 32 < 0 )
+    result |= a2 << (32 - a3);
+  return result;
+}
+
+//----- (00002D14) --------------------------------------------------------
+void sub_2D14()
+{
+  sub_2D18();
+}
+
+//----- (00002D18) --------------------------------------------------------
+void sub_2D18()
+{
+  JUMPOUT(sub_28F0);
+}
+// 28F0: using guessed type int sub_28F0();
+
+//----- (00002D24) --------------------------------------------------------
+int __fastcall sub_2D24(_DWORD *a1)
+{
+  return sub_2D28(a1);
+}
+
+//----- (00002D28) --------------------------------------------------------
+int __fastcall sub_2D28(_DWORD *a1)
+{
+  return sub_2960(a1);
+}
+
+// ALL OK, 60 function(s) have been successfully decompiled
